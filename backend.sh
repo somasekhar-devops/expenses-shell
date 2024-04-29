@@ -59,6 +59,9 @@ Validate $? "Downloading backend code"
 cd /app &>>$Logfile
 Validate $? "movng to app directory"
 
+rm -rf /app/* &>>$Logfile
+Validate $? "Removing exist files in app directory"
+
 unzip /tmp/backend.zip &>>$Logfile
 Validate $? "Unzipping the backend code"
 
